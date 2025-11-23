@@ -12,24 +12,39 @@ Loop Menu: Program berjalan dalam loop hingga user memilih keluar.
 Validasi: NIM harus unik saat tambah. Input nilai diasumsikan valid (0-100), tapi bisa ditambahkan validasi lebih lanjut jika diperlukan.
 
 FLOWCHART
-Start
-  |
-  V
-Inisialisasi data_mahasiswa = {}
-  |
-  V
-Tampilkan Menu:
-1. Tambah Data
-2. Ubah Data
-3. Hapus Data
-4. Tampilkan Data
-5. Cari Data
-6. Keluar
-  |
-  V
-Input Pilihan
-  |
-  +--> 1: Tambah Data
-  |     |
-  |     V
+          ┌────────────────────┐
+          │    Mulai Program   │
+          └─────────┬──────────┘
+                    │
+            ┌───────▼────────┐
+            │  Tampilkan Menu │
+            └───────┬────────┘
+                    │
+        ┌───────────┴───────────────────────────┐
+        │                                         │
+ ┌──────▼──────┐ ┌──────▼──────┐ ┌──────▼──────┐
+ │  Tambah Data │ │  Ubah Data  │ │ Hapus Data  │
+ └──────────────┘ └─────────────┘ └─────────────┘
+        │                │               │
+      (simpan)         (update)       (hapus)
+        │                │               │
+        └──────────┬─────┴──────────────┘
+                   │
+         ┌─────────▼────────┐
+         │ Tampilkan Data    │
+         └─────────┬────────┘
+                   │
+         ┌─────────▼────────┐
+         │  Cari Data        │
+         └─────────┬────────┘
+                   │
+         ┌─────────▼────────┐
+         │  Keluar?          │─No─┐
+         └─────────┬────────┘    │
+                   │Yes           │
+                   ▼              │
+            ┌──────────────┐      │
+            │  Program Selesai │◄──┘
+            └──────────────┘
+
   
